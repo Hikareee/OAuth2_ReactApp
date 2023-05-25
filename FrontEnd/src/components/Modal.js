@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "../styles/modal.css";
 
 function Modal({ open, modalLable, children, custom_modal, onClose }) {
@@ -27,3 +28,34 @@ function Modal({ open, modalLable, children, custom_modal, onClose }) {
 }
 
 export default Modal;
+=======
+import "../styles/modal.css";
+
+function Modal({ open, modalLable, children, custom_modal, onClose }) {
+  const handleClose = (e) => {
+    if (e.target.className === "modalContainer") {
+      onClose();
+    }
+    return null;
+  };
+
+  if (open) {
+    return (
+      <div className="modalContainer" onClick={handleClose}>
+        <div className={`modal ${custom_modal}`}>
+          <div className="modal__head">
+            <h2>{modalLable}</h2>
+            <span className="modal__close" onClick={onClose}>
+              x
+            </span>
+          </div>
+          {children}
+        </div>
+      </div>
+    );
+  }
+  return null;
+}
+
+export default Modal;
+>>>>>>> a6fef2c88f7152d5c92ff6bde7c55fe9365def60
