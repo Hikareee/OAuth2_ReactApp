@@ -9,3 +9,12 @@ class Todo(Base):
     created = Column(DateTime)
     description = Column(String) 
     completion = Column(Boolean)
+
+class User(Base):
+    __tablename__ = "Users"
+
+    id = Column(Integer, primary_key = True, index = True)
+    username = Column(String)
+    fullname = Column(String)
+    email = Column(String)
+    disabled = Column(Boolean)
