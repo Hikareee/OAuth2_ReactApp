@@ -125,3 +125,42 @@ function Login() {
 
 export default Login;
 >>>>>>> a6fef2c88f7152d5c92ff6bde7c55fe9365def60
+
+======
+
+import React from "react";
+import { Link } from "react-router-dom";
+import "../styles/Login.css";
+
+function Login() {
+  return (
+    <div>
+      {/* <style>
+        body {
+            background: url("../authenticationbg.png";)
+        }
+      </style> */}
+      <meta charSet="utf-8" />
+      <title>Sign In</title>
+      <Link rel="stylesheet" href="styles/authentication.css" />
+      <div className="auth-container">
+        <div className="auth2-container">
+          <div className="mail">Email</div>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" />
+          <div className="pass">Password</div>
+          <input type="password" id="password" name="password" placeholder="Enter your password" />
+          <a href="dashboard">
+            <button className="buttonsignup">Log in</button>
+          </a>
+          <button className="buttonoauth">Log in with OAuth2</button> {/* Added OAuth2 button */}
+          <p className="signmessage">
+            Don’t have an account yet? <a href="signup" className="bold-italic">Sign up</a> now!
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Login;
+
