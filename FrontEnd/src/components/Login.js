@@ -133,6 +133,12 @@ import { Link } from "react-router-dom";
 import "../styles/Login.css";
 
 function Login() {
+  // Function to handle OAuth2 login
+  const handleOAuth2Login = () => {
+    // Replace with code to initiate the OAuth2 flow
+    // Example: window.location.href = '/oauth2/authorize';
+  };
+
   return (
     <div>
       {/* <style>
@@ -152,7 +158,7 @@ function Login() {
           <a href="dashboard">
             <button className="buttonsignup">Log in</button>
           </a>
-          <button className="buttonoauth">Log in with OAuth2</button> {/* Added OAuth2 button */}
+          <button className="buttonoauth" onClick={handleOAuth2Login}>Log in with OAuth2</button> {/* OAuth2 button with click handler */}
           <p className="signmessage">
             Don’t have an account yet? <a href="signup" className="bold-italic">Sign up</a> now!
           </p>
@@ -163,4 +169,3 @@ function Login() {
 }
 
 export default Login;
-
